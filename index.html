@@ -79,8 +79,7 @@
       <p class="alert alert-info">This is a cooperative exercise. You should each have your laptops out.</p>
       <h1>Protips</h1>
       <ul>
-        <li>Make your life easier with a github app. (<a href="http://mac.github.com/" target="_blank">Mac</a>, <a href="http://windows.github.com/">Windows</a>)</li>
-        <li>If ever you're stuck, Github has great docs. (<a href="https://help.github.com/categories/31/articles" target="_blank">Mac</a>, <a href="https://help.github.com/categories/58/articles" target="_blank">Windows</a>) </li>
+        <li>If ever you're stuck, SourceTree has a help section.</li>
       </ul>
     </section>
     <hr>
@@ -174,17 +173,23 @@
       <p>Perfect! Now you're probably wondering how to get your teammate's changes on your computer. Let the sharing begin!</p>
       <p>Follow these steps:</p>
       <ol>
-        <li>Open your github app.</li>
+        <li>Open SourceTree.</li>
         <li>Notice that the <code>index.html</code> file has some changes to it: the changes you just made!</li>
-        <li>Type in a commit message to describe what update you are making. Example: <code>I updated my bio on the page!</code></li>
-        <li>Press commit.</li>
+        <li>Commit your changes. Make sure to type in a commit message to describe what update you are making. Example: <code>I updated my bio on the page!</code> </li>
         <li>Refresh the webpage.</li>
       </ol>
 
       <img src="img/ponder.jpg"/>
 
-      <p>Hmmm...nothing changed; Your teammate's stuff is not there, and if you check your repo on github.com, your commit is not there! The reason is because you haven't synced your changes to github yet.</p>
-      <p>To make it work, press on the sync button. Refresh the page, and you should see your teammate's changes.</p>
+      <p>Hmmm...nothing changed; Your teammate's stuff is not there, and if you check your repo on github.com, your commit is not there! The reason is because you haven't pushed your changes to github yet.</p>
+      <p>To make it work, you must both PUSH your code.</p>
+      <p>Uh oh...one of your probably got an error. That's because you can't PUSH if someone has pushed code before you do. Don't worry, there's an easy solution:</p>
+      <ol>
+        <li>Press the PULL button, then press OK.</li>
+        <li>Now try pushing your code.</li>
+      </ol>
+      <p>What PULL does is get all the latest changes from github.</p>
+      <p>You should now both be in sync! Refresh the browser, and your teammate's code should be there :)</p>
       <h2>OH YEAH!</h2>
       <img src="img/ohyeah.jpg">
       <h2>You did it!</h2>
@@ -209,21 +214,22 @@
         <div class="span6">
           <h2>Team Member 1</h2>
           <ol>
-            <li>Take all the CSS and put it in <code>main.css</code> inside the <code>css</code> directory. Don't forget to save your <code>index.html</code>.</li>
+            <li>Take all the CSS and put it in <code>main.css</code> inside the <code>css</code> folder. Don't forget to save your <code>index.html</code>.</li>
             <li>Refresh your page. Make sure the text is still red. If it's not, you need to link the <code>main.css</code> file to your html.</li>
-            <li>Commit &amp; sync your changes to github.</li>
+            <li>Commit &amp; push your changes to github.</li>
           </ol>
         </div>
         <div class="span6">
           <h2>Team Member 2</h2>
           <ol>
-            <li>Take all the javascript and put it in <code>main.js</code> inside the <code>js</code> directory. Don't forget to save your <code>index.html</code>.</li>
+            <li>Take all the javascript and put it in <code>main.js</code> inside the <code>js</code> folder. Don't forget to save your <code>index.html</code>.</li>
             <li>Refresh your page. Make sure the text is still blinking. If it's not, you need to link the <code>main.js</code> file to your html.</li>
-            <li>Commit &amp; sync your changes to github.</li>
+            <li>Commit &amp; push your changes to github.</li>
           </ol>
         </div>
       </div>
-      <p>Both of your projects should now be in sync. The javascript & CSS should be out of your <code>index.html</code>.</p>
+
+      <p>Before moving on, you must both by in sync. Make sure to press "PULL" so you have the latest changes on your computer. The javascript & CSS should be out of your <code>index.html</code></p>
       <h4>You make a great team!</h4>
       <img src="img/team2.jpg">
     </section>
@@ -245,66 +251,39 @@
           <h2>Team Member 1</h2>
           <ol>
             <li>Change the quote above to something you think is even more awesome. It must be different from your teammate's.</li>
-            <li>Commit &amp; sync your changes to github.</li>
+            <li>Commit &amp; push your changes to github.</li>
           </ol>
         </div>
         <div class="span6">
           <h2>Team Member 2</h2>
           <ol>
             <li>Change the quote above to something you think is even more awesome. It must be different from your teammate's.</li>
-            <li>Commit &amp; sync your changes to github.</li>
+            <li>Commit &amp; push your changes to github.</li>
           </ol>
         </div>
       </div>
-      <p>Let me guess what happened. One of you(clearly the cooler one) was able to sync without a problem. The other one got some message complaining about 'resolving merge conflicts'.</p>
-      <p>How do you resolve it? Something like this:</p>
+      <p>Let me guess what happened. One of you(clearly the cooler one) was able to push without a problem. The other one got some message complaining about 'Merge conflicts'.</p>
+      <p>The following instructions are for the person who HAS the Merge Conflicts. The other person should watch you (and provide moral support).</p>
+      <ol>
+        <li>Go to your <code>index.html</code></li>
+        <li>Notice that where the quote is for Exercise 4, there are actually 2 quotes now, with some funny &lt;&lt;&lt;&lt;HEAD stuff going on. <br>
+        Everything between  <code>&lt;&lt;&lt;&lt;HEAD</code> and <code>=============</code> is your changes. <br>
+        Everything between  <code>=========</code> and <code>&gt;&gt;&gt;&gt;somebignumber</code> is your teammate's changes.</li>
+        <li>Now you have to pick which one to keep....</li>
+      </ol>
+      <p>How do you do that? Something like this:</p>
       <img src="img/duel.png"/><br><br>
-      <a class="btn" href="http://bit.ly/11wyw9o" target="_blank">Click here for the answer!</a>
-      <p>Once the conflicts are resolved, make sure that both of your laptops are in sync. Then high-five each other and yell out your <a href="http://www.youtube.com/watch?v=_QDAT1PlVyw" target="_blank">team battlecry.</a></p>
+      <ol>
+        <li>When you've decided which quote to keep, modify the code so it looks how you want (remove the quote you don't want). Don't forget to remove all the &lt;&lt;&lt;&lt;HEAD crap.</li>
+        <li>When you refresh the page, it should show the correct quote.</li>
+        <li>Commit your changes, then push them to github.</li>
+      </ol>
+
+      <p>Yay, the conflicts are resolved. Now make sure that both of your laptops are in sync. When they are, high-five each other and yell out your <a href="http://www.youtube.com/watch?v=_QDAT1PlVyw" target="_blank">team battlecry.</a></p>
       <small>(If you haven't heard anyone in the class make those noises yet, then you're the first team to get here. Yay!)</small>
     </section>
     <hr/>
 
-
-
-    <section>
-      <h1>Exercise 5</h1>
-      <h2>TASK: Get this exercise in your local <code>index.html</code>.</h2>
-      <p>So your team is awesome and you want more challenges, eh? No problem.</p>
-      <p>Until now you've been very trusting of people's code. You've let your teammates sync to github without double checking what they're doing.</p>
-      <p>Introducing <strong>Pull Requests</strong>. This lets your teammate's review your code before you sync it.</p>
-      <div id="task5" class="row-fluid split-exercise">
-        <div class="span6">
-          <h2>Team Member 1</h2>
-          <h3>Replace this line with a joke.</h3>
-          <ol>
-            <li>Go to your github app, and press on the 'Branches' tab.</li>
-            <li>Create a new branch and call it your name.</li>
-            <li>Publish the branch to github.</li>
-            <li>Look at your repo on github.com. You should notice that your jokes arent't there. That's because github looks at the <strong>master</strong> branch by default. Look for a way to view the branch you just created.</li>
-            <li>Create a pull request for your branch.</li>
-            <li>Get your teammate to review your pull request(on their laptop), and comment on it.</li>
-            <li>When you're happy with the comments, merge your branch into master.</li>
-            <li>Sync your code locally, and you should now see your teammate's lame joke.</li>
-          </ol>
-        </div>
-        <div class="span6">
-          <h2>Team Member 2</h2>
-          <h3>Replace this line with a joke.</h3>
-          <ol>
-            <li>Go to your github app, and press on the 'Branches' tab.</li>
-            <li>Create a new branch and call it your name.</li>
-            <li>Publish the branch to github.</li>
-            <li>Look at your repo on github.com. You should notice that your jokes arent't there. That's because github looks at the <strong>master</strong> branch by default. Look for a way to view the branch you just created.</li>
-            <li>Create a pull request for your branch.</li>
-            <li>Get your teammate to review your pull request(on their laptop), and comment on it.</li>
-            <li>When you're happy with the comments, merge your branch into master.</li>
-            <li>Sync your code locally, and you should now see your teammate's lame joke.</li>
-          </ol>
-        </div>
-      </div>
-
-      <img src="img/sexy.jpg" alt="Bonus task. Find out why this image isn't loading...">
     </section>
   </div>
 
